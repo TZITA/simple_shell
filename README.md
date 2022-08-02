@@ -1,6 +1,6 @@
 # ALX SE SIMPLE_SHELL PROJECT
 
-This repository is the files for the implementation of a simple shell.
+This repository contains the files for the implementation of a simple shell.
 
 ## Complilation
 
