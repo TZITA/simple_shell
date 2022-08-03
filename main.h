@@ -9,7 +9,7 @@
 #define HSH_TOKENS_BS 64
 #define HSH_TOKENS_DELIMITER " ;\t\r\n\a"
 
-
+int str_cmp(const char *s1, const char *s2);
 void HSH_main_loop(void);
 char *HSH_readl(void);
 char **HSH_splitl(char *com_line);
