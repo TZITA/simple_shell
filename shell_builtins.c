@@ -28,7 +28,7 @@ int HSH_cd(char **com_args)
 {
 	if (com_args[1] == NULL)
 	{
-		perror("Expected Argument cd\n");
+		chdir("~");
 	}
 	else
 	{
