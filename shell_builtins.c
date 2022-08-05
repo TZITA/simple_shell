@@ -11,10 +11,38 @@ int HSH_BINS_NUM(void)
 	char *builtin_com[] = {
 		"cd",
 		"exit",
-		"help"
+		"help",
+		"setenv"
 	};
 
 	return (sizeof(builtin_com) / sizeof(char *));
+}
+
+/**
+ * HSH_setenv - initialize a new env var or modify an existing one
+ * @com_args: Array of arguments
+ *
+ * Return: 0.
+ */
+
+int HSH_setenv(char **com_args)
+{
+	if ((com_args[1] != NULL) && (com_args[2] != NULL))
+	{
+		if (setenv(com_args[1], com_args[2], 1) == 0)
+		{
+			setenv(com_args[1], com_args[2], 1);
+		}
+		else
+		{
+			perror("setenv error");
+		}
+	}
+	else
+	{
+		perror("setenv error");
+	}
+	return (1);
 }
 
 /**
