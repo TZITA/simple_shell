@@ -13,12 +13,16 @@ int HSH_exec(char **com_args)
 	char *builtin_com[] = {
 		"cd",
 		"exit",
-		"help"
+		"help",
+		"setenv",
+		"unsetenv"
 	};
 	int (*builtin_functions[])(char **) = {
 		&HSH_cd,
 		&HSH_exit,
-		&HSH_help
+		&HSH_help,
+		&HSH_setenv,
+		&HSH_unsetenv
 	};
 
 	if (com_args[0] == NULL)

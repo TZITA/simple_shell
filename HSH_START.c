@@ -17,13 +17,13 @@ int HSH_START(char **com_args)
 	{
 		if (execvp(com_args[0], com_args) == -1)
 		{
-			perror("Execvp Error:");
+			perror("./hsh: 1");
 		}
 		exit(EXIT_FAILURE);
 	}
 	else if (pid < 0)
 	{
-		perror("Error Forking:");
+		perror("Error Forking");
 	}
 	else
 	{
