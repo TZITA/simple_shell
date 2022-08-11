@@ -8,3 +8,4 @@ The files are to be compiled using the following command:
 ```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 ```
+August 2022
