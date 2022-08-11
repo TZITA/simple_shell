@@ -11,7 +11,9 @@ int HSH_BINS_NUM(void)
 	char *builtin_com[] = {
 		"cd",
 		"exit",
-		"help"
+		"help",
+		"setenv",
+		"unsetenv"
 	};
 
 	return (sizeof(builtin_com) / sizeof(char *));
@@ -28,7 +30,7 @@ int HSH_cd(char **com_args)
 {
 	if (com_args[1] == NULL)
 	{
-		perror("Expected Argument cd\n");
+		chdir("~");
 	}
 	else
 	{
